@@ -20,6 +20,6 @@ def fetch_pokemon_data():
 
     # Pārvērš CSV tekstu par pandas DataFrame
     csv_data = StringIO(response.text)
-    df = pd.read_csv(csv_data, on_bad_lines='skip')  # Ignore the incorrect rows of data, for example, 1043 row has too many values
+    df = pd.read_csv(csv_data, on_bad_lines='skip')  # Ignore the incorrect rows of data, for example, 1043. row has too many values
 
     return df
