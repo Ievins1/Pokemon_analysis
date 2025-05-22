@@ -16,5 +16,9 @@ if __name__ == "__main__":
         "TYPE2": "first"
     })
 
-    # Show Top 10
-    print(grouped[['NAME', 'TYPE1', 'TYPE2', 'TYPE_EFFECTIVENESS_SCORE']].head(10))
+    # Assign ranks after grouping
+    grouped["RANK"] = grouped["TYPE_EFFECTIVENESS_SCORE"].rank(ascending=False, method="dense").astype(int)
+
+    # Show Top 10 Pokémon sorted by ascending rank
+    top_10 = grouped.sort_values(by="RANK").head(10)
+    print(top_10[['RANK', 'NAME', 'TYPE1', 'TYPE2', 'TYPE_EFFECTIVENESS_SCORE']])
