@@ -33,3 +33,7 @@ This directory contains inner functions that are needed:
 ### To receive top 10 ranking, from the main directory run this command:
 'python3 main.py'
 The results will be shown in terminal. The full results are available inside the google docs. The automatical storing inside the google is not working for others, because I used personal google data in 'secret_account.json'
+
+# Created Google links:
+- Google sheets: https://docs.google.com/spreadsheets/d/1Uaxs3paVT9QI74wKAlyz0KSXsB8g8m7fq3hFSxt9G7o/edit?usp=sharing
+- Google Looker Studio: https://lookerstudio.google.com/reporting/b7e949cb-bd28-4d0b-a58f-a21666cf3a06
