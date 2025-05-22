@@ -3,7 +3,9 @@ import json
 import os
 
 # Load the type efficiency: https://img.pokemondb.net/images/typechart.png - is stored in .json
-def load_type_chart(path="internal/type_chart.json"):
+def load_type_chart(path=None):
+    if path is None:
+        path = os.path.join(os.path.dirname(__file__), "type_chart.json")
     with open(path, "r") as f:
         return json.load(f)
 
